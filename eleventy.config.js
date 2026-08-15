@@ -29,8 +29,21 @@ export default function (eleventyConfig) {
     );
   });
 
-  eleventyConfig.addFilter("dateShort", (date) => {
-    return DateTime.fromJSDate(date, { zone: TIME_ZONE }).toFormat("M/d");
+  eleventyConfig.addFilter("dateDisplay", (date) => {
+    return DateTime.fromJSDate(date, { zone: TIME_ZONE }).toFormat(
+      "ccc yyyy-MM-dd",
+    );
+  });
+
+  eleventyConfig.addFilter("entryNeighbors", (entries, url) => {
+    const index = entries.findIndex((entry) => entry.url === url);
+    if (index === -1) {
+      return { previous: null, next: null };
+    }
+    return {
+      previous: entries[index + 1] ?? null,
+      next: index > 0 ? entries[index - 1] : null,
+    };
   });
 
   eleventyConfig.addCollection("entries", (api) => {

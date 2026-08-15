@@ -1,7 +1,13 @@
 <section class="posting">
   <div class="posting-header">
-    <h1>{{ postingTitle }}</h1>
-    <p class="posted">posted: {{ postingDate | dateFormat }}</p>
+    <h1>
+      {% if postingPermalink %}
+        <a href="{{ postingPermalink }}">{{ postingTitle }}</a>
+      {% else %}
+        {{ postingTitle }}
+      {% endif %}
+    </h1>
+    <p class="posted">posted: <time datetime="{{ postingDate | dateFormat }}">{{ postingDate | dateDisplay }}</time></p>
   </div>
   <div class="posting-body">
     {{ postingBody | safe }}

@@ -9,9 +9,20 @@
 <body>
   <div class="page">
     <header class="global-header">
-      <a class="logo" href="/">{{ site.name }}</a>
+      <div class="brand">
+        {% if page.url == "/" %}
+          <span class="logo">{{ site.name }}</span>
+        {% else %}
+          <a class="logo" href="/">{{ site.name }}</a>
+        {% endif %}
+        <span class="tagline">{{ site.tagline }}</span>
+      </div>
       <nav class="top-links">
-        <a href="/log/">log</a>
+        {% if page.url == "/log/" %}
+          <span class="current">log</span>
+        {% else %}
+          <a href="/log/">log</a>
+        {% endif %}
       </nav>
     </header>
 

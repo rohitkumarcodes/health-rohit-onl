@@ -7,7 +7,9 @@ permalink: /
   {% set postingTitle = latest.data.title %}
   {% set postingDate = latest.date %}
   {% set postingBody = latest.templateContent %}
+  {% set postingPermalink = latest.url %}
   {% include "posting.njk" %}
+  <p class="older">older: <a href="/log/">log</a></p>
 {% else %}
   <p class="empty">nothing posted yet.</p>
 {% endif %}

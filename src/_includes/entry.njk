@@ -5,3 +5,19 @@ layout: base.njk
 {% set postingDate = page.date %}
 {% set postingBody = content %}
 {% include "posting.njk" %}
+{% set neighbors = collections.entries | entryNeighbors(page.url) %}
+<p class="entry-nav">
+  {% if neighbors.previous %}
+    <a href="{{ neighbors.previous.url }}">previous</a>
+  {% else %}
+    <span class="inactive">previous</span>
+  {% endif %}
+  |
+  <a href="/log/">log</a>
+  |
+  {% if neighbors.next %}
+    <a href="{{ neighbors.next.url }}">next</a>
+  {% else %}
+    <span class="inactive">next</span>
+  {% endif %}
+</p>

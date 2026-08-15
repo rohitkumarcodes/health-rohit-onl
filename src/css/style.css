@@ -22,6 +22,7 @@ a:visited {
 .page {
   max-width: 720px;
   margin: 0 auto;
+  padding: 0 12px;
 }
 
 .global-header {
@@ -36,6 +37,13 @@ a:visited {
   padding: 8px 12px;
 }
 
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .logo {
   font-family: "Times New Roman", Times, serif;
   font-size: 24px;
@@ -44,12 +52,22 @@ a:visited {
   text-decoration: none;
 }
 
-.logo:visited {
+a.logo:visited {
   color: #800080;
+}
+
+.tagline {
+  color: #555555;
+  font-size: 13px;
 }
 
 .top-links {
   font-size: 13px;
+}
+
+.current,
+.inactive {
+  color: #555555;
 }
 
 main {
@@ -110,7 +128,7 @@ main {
   align-items: baseline;
   justify-content: space-between;
   gap: 16px;
-  padding: 8px 12px;
+  padding: 12px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -118,14 +136,33 @@ main {
   border-bottom: none;
 }
 
-.results time {
+.results li:hover {
+  background: #f5f5f5;
+}
+
+.results .meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.results .latest,
+.results time {
   color: #555555;
   font-size: 12px;
 }
 
 .results a {
+  flex: 1;
   font-size: 16px;
+}
+
+.older,
+.entry-nav {
+  margin: 8px 0 0;
+  font-size: 13px;
 }
 
 .empty {

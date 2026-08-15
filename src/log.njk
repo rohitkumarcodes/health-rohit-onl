@@ -4,17 +4,19 @@ title: log
 permalink: /log/
 ---
 <div class="log">
-  {% set older = collections.entries.slice(1) %}
-  {% if older.length %}
+  {% if collections.entries.length %}
     <ul class="results">
-      {% for entry in older %}
+      {% for entry in collections.entries %}
         <li>
           <a href="{{ entry.url }}">{{ entry.data.title }}</a>
-          <time datetime="{{ entry.date | dateFormat }}">{{ entry.date | dateShort }}</time>
+          <span class="meta">
+            {% if loop.first %}<span class="latest">latest</span>{% endif %}
+            <time datetime="{{ entry.date | dateFormat }}">{{ entry.date | dateDisplay }}</time>
+          </span>
         </li>
       {% endfor %}
     </ul>
   {% else %}
-    <p class="empty">no older entries.</p>
+    <p class="empty">no entries.</p>
   {% endif %}
 </div>
