@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: log
+crumb: log
+permalink: /log/
+---
+<div class="log">
+  <div class="log-header">
+    <h1>log</h1>
+    <p class="hint">older entries</p>
+  </div>
+  {% set older = collections.entries.slice(1) %}
+  {% if older.length %}
+    <ul class="results">
+      {% for entry in older %}
+        <li>
+          <time datetime="{{ entry.date | dateFormat }}">{{ entry.date | dateFormat }}</time>
+          <a href="{{ entry.url }}">{{ entry.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="empty">no older entries.</p>
+  {% endif %}
+</div>

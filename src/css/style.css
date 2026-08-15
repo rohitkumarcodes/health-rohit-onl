@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eeeeee;
+  color: #222222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+a {
+  color: #0000ee;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.global-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-top: none;
+  padding: 8px 12px;
+}
+
+.logo {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #800080;
+  text-decoration: none;
+}
+
+.logo:visited {
+  color: #800080;
+}
+
+.crumbs {
+  flex: 1;
+  font-size: 13px;
+}
+
+.top-links {
+  font-size: 13px;
+}
+
+.sep {
+  color: #666666;
+  margin: 0 4px;
+}
+
+main {
+  padding: 10px 0;
+}
+
+.posting-header,
+.log-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ffffcc;
+  border: 1px solid #cccccc;
+  padding: 8px 12px;
+}
+
+.posting-header h1,
+.log-header h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.posted,
+.hint {
+  margin: 0;
+  color: #555555;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.posting-body,
+.results,
+.empty {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-top: none;
+  padding: 12px;
+}
+
+.posting-body p:first-child {
+  margin-top: 0;
+}
+
+.posting-body p:last-child {
+  margin-bottom: 0;
+}
+
+.permalink {
+  margin: 8px 12px 0;
+  font-size: 12px;
+}
+
+.log-header h1 {
+  font-size: 16px;
+}
+
+.results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.results li {
+  padding: 6px 12px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.results li:last-child {
+  border-bottom: none;
+}
+
+.results time {
+  display: inline-block;
+  width: 7.5em;
+  color: #555555;
+  font-size: 12px;
+}
+
+.empty {
+  border-top: 1px solid #cccccc;
+  color: #555555;
+}
+
+.site-footer {
+  padding: 10px 12px 24px;
+  color: #666666;
+  font-size: 12px;
+}

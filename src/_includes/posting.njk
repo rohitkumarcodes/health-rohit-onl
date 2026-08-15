@@ -1,0 +1,9 @@
+<section class="posting">
+  <div class="posting-header">
+    <h1>{{ postingTitle }}</h1>
+    <p class="posted">posted: {{ postingDate | dateFormat }}</p>
+  </div>
+  <div class="posting-body">
+    {{ postingBody | safe }}
+  </div>
+</section>

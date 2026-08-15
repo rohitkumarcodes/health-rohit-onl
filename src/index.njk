@@ -1,0 +1,14 @@
+---
+layout: base.njk
+permalink: /
+---
+{% set latest = collections.entries[0] %}
+{% if latest %}
+  {% set postingTitle = latest.data.title %}
+  {% set postingDate = latest.date %}
+  {% set postingBody = latest.templateContent %}
+  {% include "posting.njk" %}
+  <p class="permalink"><a href="{{ latest.url }}">permalink</a></p>
+{% else %}
+  <p class="empty">nothing posted yet.</p>
+{% endif %}
