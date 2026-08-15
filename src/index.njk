@@ -8,7 +8,6 @@ permalink: /
   {% set postingDate = latest.date %}
   {% set postingBody = latest.templateContent %}
   {% include "posting.njk" %}
-  <p class="permalink"><a href="{{ latest.url }}">permalink</a></p>
 {% else %}
   <p class="empty">nothing posted yet.</p>
 {% endif %}

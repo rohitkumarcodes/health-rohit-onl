@@ -10,6 +10,5 @@ export default {
       const slug = path.basename(data.page.inputPath, path.extname(data.page.inputPath));
       return `/log/${slug}/`;
     },
-    crumb: (data) => data.title,
   },
 };

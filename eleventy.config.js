@@ -29,6 +29,10 @@ export default function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("dateShort", (date) => {
+    return DateTime.fromJSDate(date, { zone: TIME_ZONE }).toFormat("M/d");
+  });
+
   eleventyConfig.addCollection("entries", (api) => {
     const now = new Date();
     return api

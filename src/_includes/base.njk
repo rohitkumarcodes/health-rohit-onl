@@ -10,17 +10,7 @@
   <div class="page">
     <header class="global-header">
       <a class="logo" href="/">{{ site.name }}</a>
-      <nav class="crumbs" aria-label="breadcrumb">
-        <a href="/">CL</a>
-        &gt;
-        <a href="/">health</a>
-        {%- if crumb %}
-        &gt; <span>{{ crumb }}</span>
-        {%- endif %}
-      </nav>
       <nav class="top-links">
-        <a href="/">home</a>
-        <span class="sep">|</span>
         <a href="/log/">log</a>
       </nav>
     </header>
@@ -28,10 +18,6 @@
     <main>
       {{ content | safe }}
     </main>
-
-    <footer class="site-footer">
-      {{ site.name }} &mdash; {{ site.tagline }}
-    </footer>
   </div>
 </body>
 </html>
