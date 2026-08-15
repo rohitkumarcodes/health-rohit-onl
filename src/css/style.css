@@ -61,7 +61,7 @@ main {
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  background: #ffffcc;
+  background: #c9d4f0;
   border: 1px solid #cccccc;
   padding: 8px 12px;
 }
@@ -126,7 +126,6 @@ main {
 
 .results a {
   font-size: 16px;
-  text-align: right;
 }
 
 .empty {

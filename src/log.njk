@@ -9,8 +9,8 @@ permalink: /log/
     <ul class="results">
       {% for entry in older %}
         <li>
-          <time datetime="{{ entry.date | dateFormat }}">{{ entry.date | dateShort }}</time>
           <a href="{{ entry.url }}">{{ entry.data.title }}</a>
+          <time datetime="{{ entry.date | dateFormat }}">{{ entry.date | dateShort }}</time>
         </li>
       {% endfor %}
     </ul>
